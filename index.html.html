@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jay Laxmi Traders – उर्लाबारी, मोरङ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2238;--navy2:#16324f;--gold:#f5a623;--green:#1fa855;--ink:#1c2733;--mute:#6b7785;--bg:#f4f7fb;--line:#e3e8ef}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Mukta',sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.eyebrow{color:var(--gold);font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}
+.eyebrow:before{content:"";width:22px;height:3px;background:var(--gold)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 1px 8px rgba(0,0,0,.08)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo svg{width:40px;height:40px}
+.logo b{display:block;font-size:19px;font-weight:800;color:var(--navy);line-height:1}
+.logo small{font-size:10px;color:var(--mute)}
+nav{display:flex;gap:26px;font-weight:600;font-size:14px}
+nav a{padding:6px 0;border-bottom:2px solid transparent}
+nav a.active,nav a:hover{color:var(--gold);border-color:var(--gold)}
+.hr{display:flex;align-items:center;gap:16px;font-size:13px;font-weight:600}
+.lang button{background:none;border:0;font:inherit;cursor:pointer;color:var(--mute)}
+.lang button.on{color:var(--navy);font-weight:800}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:6px;padding:9px 18px;font:600 14px 'Mukta';cursor:pointer;transition:.2s}
+.btn.wa{background:var(--green);color:#fff}
+.btn.wa:hover{background:#178a45}
+.btn.out{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.6)}
+.btn.out:hover{background:rgba(255,255,255,.2)}
+.btn svg{width:18px;height:18px;fill:currentColor}
+.burger{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+/* hero */
+.hero{background:linear-gradient(90deg,#0d1d30 0%,#0f2238 42%,rgba(15,34,56,.55) 70%,rgba(15,34,56,.15) 100%),linear-gradient(135deg,#7fa6c9,#d9c7a3 60%,#8db56f);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:block;max-width:640px;min-height:312px;padding-top:30px;padding-bottom:30px}
+.hero h1{font-size:26px;font-weight:700}
+.hero h1 em{display:block;font-style:normal;color:var(--gold);font-size:44px;font-weight:800;line-height:1.15}
+.hero p{font-size:18px;margin:12px 0 10px}
+.hero .tag{font-size:15px;font-weight:600;border-left:0;display:flex;align-items:center;gap:8px}
+.hero .tag:before{content:"";width:24px;height:3px;background:var(--gold)}
+.hero .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.bucket{justify-self:center;width:230px;height:250px;position:relative;filter:drop-shadow(0 18px 18px rgba(0,0,0,.4))}
+.bucket .lid{position:absolute;top:0;left:8px;right:8px;height:34px;border-radius:50%;background:#d7e34a}
+.bucket .body{position:absolute;top:18px;left:8px;right:8px;bottom:0;background:linear-gradient(90deg,#b5c52a,#dfe95a 45%,#a9b826);border-radius:6px 6px 40px 40px/6px 6px 20px 20px;text-align:center;padding-top:52px;color:#fff}
+.bucket .body i{display:block;font:italic 700 26px Georgia,serif;color:#c02a2a;line-height:1}
+.bucket .body small{font-size:10px;color:#555;font-family:Georgia,serif}
+.bucket .brand{font:italic 12px Georgia;color:#e5f0b0;position:absolute;top:34px;width:100%;text-align:center}
+.bucket .lab{width:80px;height:40px;background:#fff;margin:14px auto 0;border-radius:2px}
+.roller{position:absolute;left:-70px;bottom:6px;width:90px;height:28px;background:#f2ecd8;border-radius:14px;transform:rotate(-12deg)}
+.roller:before{content:"";position:absolute;left:-26px;top:8px;width:30px;height:10px;background:#1d63d6;border-radius:5px}
+/* strip */
+.strip{background:var(--bg)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.strip .it{display:flex;gap:12px;align-items:center;padding:18px 16px;border-right:1px solid var(--line)}
+.strip .it:last-child{border:0}
+.strip svg{width:34px;height:34px;flex:none;stroke:var(--navy);fill:none;stroke-width:1.8}
+.strip b{display:block;font-size:14px;color:var(--navy)}
+.strip small{font-size:12px;color:var(--mute)}
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1.05fr 260px;gap:30px;padding-top:36px;padding-bottom:36px;align-items:start}
+.shop{border-radius:6px;overflow:hidden;height:280px;background:linear-gradient(#cfe0ee 0 30%,#c65a4a 30% 38%,#e8dccb 38%);position:relative;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.shop span{position:absolute;top:44%;left:6%;right:6%;background:#c9302c;color:#fff;font-weight:800;text-align:center;padding:6px;font-size:20px;border:3px solid #fff}
+.shop:after{content:"";position:absolute;left:10%;right:10%;bottom:0;height:42%;background:repeating-linear-gradient(90deg,#3b6fb5 0 18px,#f5a623 18px 30px,#fff 30px 44px)}
+.about h2{font-size:30px;color:var(--navy);font-weight:800;margin:4px 0 8px}
+.about p{font-size:15px;color:#3b4855}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);margin-top:18px}
+.feat div{text-align:center;font-size:12px;color:var(--navy);border-right:1px solid var(--line);padding:4px}
+.feat div:last-child{border:0}
+.feat i{display:block;font-style:normal;font-size:22px}
+.card-dark{background:var(--navy);color:#fff;border-radius:8px;padding:22px 18px;text-align:center;position:relative;overflow:hidden}
+.card-dark:after{content:"";position:absolute;top:0;right:0;border-top:36px solid var(--gold);border-left:36px solid transparent}
+.card-dark h3{font-size:24px;margin:6px 0}
+.card-dark p{font-size:13px;color:#dbe4ee}
+.card-dark strong{display:block;color:var(--gold);margin:8px 0 12px;font-size:15px}
+.card-dark .r{display:flex;gap:8px;text-align:left;font-size:14px;font-weight:600;padding:3px 0}
+/* products */
+.prod{padding:10px 0 36px}
+.prod h2{font-size:30px;color:var(--navy);font-weight:800}
+.prod>.wrap>p{color:var(--mute);margin:4px 0 18px;font-size:15px}
+.grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px}
+.pc{border:1px solid var(--line);border-radius:8px;padding:18px;background:#fff;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(15,34,56,.06)}
+.pc h3{font-size:22px;color:var(--navy);font-weight:800;line-height:1.2;display:flex;align-items:center;gap:10px}
+.pc h3 span{width:32px;height:32px;border-radius:8px;background:var(--navy);flex:none;display:grid;place-items:center;color:#fff;font-size:15px}
+.pc>small{color:var(--mute);font-size:13px}
+.vis{height:150px;display:flex;align-items:flex-end;justify-content:center;gap:6px;margin:10px 0}
+.can{width:44px;border-radius:5px;position:relative;box-shadow:inset -6px 0 8px rgba(0,0,0,.15)}
+.can:before{content:"";position:absolute;top:-5px;left:0;right:0;height:9px;border-radius:50%;background:inherit;filter:brightness(1.1)}
+.blk{width:110px;height:64px;background:linear-gradient(135deg,#f2f2f2,#cfcfcf);border-radius:4px;box-shadow:0 8px 10px rgba(0,0,0,.2)}
+.sheets{position:relative;width:200px;height:120px}
+.sheets i{position:absolute;left:0;width:190px;height:70px;border-radius:4px;transform:skewX(-35deg) rotate(-8deg);background:repeating-linear-gradient(90deg,var(--c) 0 8px,rgba(0,0,0,.2) 8px 10px)}
+.icons{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;text-align:center;font-size:12px;border-top:1px solid var(--line);padding-top:12px;margin-bottom:12px;gap:4px}
+.icons b{display:block;color:var(--navy);font-size:13px}
+.icons i{font-style:normal;font-size:22px;display:block}
+.sizes{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+.sizes span{border:1px solid var(--line);border-radius:4px;font-size:11px;color:var(--mute);padding:4px 8px;text-align:center}
+.pc .more{margin-top:auto;border:1px solid var(--navy2);border-radius:5px;padding:7px;text-align:center;font-weight:600;font-size:14px;color:var(--navy2);transition:.2s}
+.pc .more:hover{background:var(--navy);color:#fff}
+/* services */
+.serv{background:linear-gradient(90deg,#0d1d30 30%,rgba(13,29,48,.55) 70%,rgba(230,140,60,.5)),repeating-linear-gradient(90deg,#3a3f4a 0 40px,#2a2e37 40px 44px);color:#fff}
+.serv .wrap{padding-top:34px;padding-bottom:34px}
+.serv h2{font-size:30px;font-weight:800;line-height:1.2;margin:6px 0}
+.serv p{max-width:480px;font-size:14px}
+.serv a.mini{display:inline-block;background:#fff;color:var(--navy);border-radius:4px;padding:2px 12px;font-size:13px;font-weight:600;margin-top:8px}
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:230px 1.1fr 1.1fr auto;gap:24px;align-items:center;padding-top:16px;padding-bottom:16px}
+.contact .ph{height:110px;border-radius:6px;background:linear-gradient(#cfe0ee 0 35%,#e8dccb 35%);box-shadow:0 3px 8px rgba(0,0,0,.15)}
+.contact b.t{color:var(--navy);font-size:16px}
+.contact small{color:var(--mute);display:block}
+.contact .num{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--navy);font-size:17px}
+.contact .num.sm{font-size:14px;font-weight:600}
+.contact .btn{width:100%;justify-content:center;margin-top:6px}
+.locbtn{background:var(--navy);color:#fff;border-radius:6px;padding:14px 22px;text-align:left;cursor:pointer;border:0;font-family:inherit;display:flex;gap:12px;align-items:center}
+.locbtn b{display:block;font-size:14px}.locbtn small{color:#cbd5e1;font-size:12px}
+/* footer */
+footer{background:var(--navy);color:#fff}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:16px;padding-bottom:6px;flex-wrap:wrap}
+footer .logo b{color:#fff;font-size:16px}footer .logo small{color:#cbd5e1}
+footer .mid{display:flex;gap:16px;align-items:center;font-weight:600;font-size:14px}
+.social{display:flex;gap:10px;align-items:center;font-size:12px}
+.social a{width:26px;height:26px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:10px;font-size:11px;color:#cbd5e1}
+.copy .wrap{padding-top:8px;padding-bottom:10px}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.modal.open{display:flex}
+.mbox{background:#fff;border-radius:10px;width:min(820px,100%);overflow:hidden}
+.mbox header{position:static;box-shadow:none;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--navy)}
+.mbox iframe{width:100%;height:420px;border:0}
+.mbox .f{padding:12px 18px;display:flex;justify-content:flex-end;gap:10px}
+.x{background:none;border:0;font-size:24px;cursor:pointer}
+.has-img:after{display:none}
+.has-img span{display:none}
+.bucket img,.vis img{max-width:100%;max-height:100%;object-fit:contain}
+/* responsive */
+@media(max-width:900px){
+nav{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;flex-direction:column;padding:14px 20px;gap:12px;box-shadow:0 8px 12px rgba(0,0,0,.1)}
+nav.open{display:flex}.burger{display:block}
+.hero .wrap,.about .wrap,.grid,.contact .wrap{grid-template-columns:1fr}
+.strip .wrap{grid-template-columns:1fr 1fr}
+.hero h1 em{font-size:34px}.bucket{margin:20px auto 0}
+}
+@media(max-width:520px){.hr .btn span{display:none}.strip .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+  <a href="#home" class="logo">
+    <img src="images/logo.png" alt="Jay Laxmi Traders logo" style="width:40px;height:40px;object-fit:contain">
+    <span><b>JAY LAXMI TRADERS</b><small>Paints | Blocks | Roofing | Construction Materials</small></span>
+  </a>
+  <nav id="nav">
+    <a href="#home" class="active" data-en="Home">गृहपृष्ठ</a>
+    <a href="#about" data-en="About Us">हाम्रो बारेमा</a>
+    <a href="#products" data-en="Products">उत्पादनहरू</a>
+    <a href="#services" data-en="Services">सेवाहरू</a>
+    <a href="#contact" data-en="Contact">सम्पर्क</a>
+  </nav>
+  <div class="hr">
+    <div class="lang"><button class="on" data-l="ne">नेपाली</button> | <button data-l="en">EN</button></div>
+    <a class="btn wa wa-link" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.400.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.700-.1 1.200z"/></svg><span>WhatsApp</span></a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="wrap">
+  <div>
+    <h1 data-en="For homes and buildings">घर र भवनका लागि<em data-en="Best quality paints">उत्तम गुणस्तरका पेन्टहरू</em></h1>
+    <p data-en="Premium materials from trusted brands for your home and construction.">विश्वसनीय ब्राण्डका प्रिमियम सामग्रीहरू,<br>तपाईंको घर र निर्माण कार्यका लागि ।</p>
+    <div class="tag">जय लक्ष्मी ट्रेडर्स – अपोलो पेन्ट्सको आधिकारिक विक्रेता</div>
+    <div class="cta">
+      <a class="btn wa wa-link" href="#" target="_blank" rel="noopener">WhatsApp मार्फत सम्पर्क गर्नुहोस्</a>
+      <button class="btn out open-map">📍 हाम्रो लोकेशन हेर्नुहोस्</button>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<section class="strip">
+<div class="wrap">
+  <div class="it"><svg viewBox="0 0 40 40"><path d="M8 12h24v22a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3zM8 12c0-4 24-4 24 0"/></svg><span><b>अपोलो पेन्ट्सको आधिकारिक विक्रेता</b><small>मूल उत्पादन, भरपर्दो ब्रान्ड</small></span></div>
+  <div class="it"><svg viewBox="0 0 40 40"><path d="M20 4l14 8v16l-14 8-14-8V12zM20 20l14-8M20 20L6 12M20 20v16"/></svg><span><b>मेक्सी इन्डस्ट्रिज AAC ब्लकहरू</b><small>मजबुत • टिकाउ • गुणस्तरीय</small></span></div>
+  <div class="it"><svg viewBox="0 0 40 40"><path d="M4 26l20-8 12 4-20 8zM4 20l20-8 12 4M4 32l20-8 12 4"/></svg><span><b>छतको लागि जस्ता पाता</b><small>लामो समयसम्म टिकाउ सुरक्षा</small></span></div>
+  <div class="it"><svg viewBox="0 0 40 40"><path d="M20 37S8 24 8 15a12 12 0 0 1 24 0c0 9-12 22-12 22z"/><circle cx="20" cy="15" r="4"/></svg><span><b>उर्लाबारी, मोरङ</b><small>स्थानीय सेवा, छिटो सेवा</small></span></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="wrap">
+  <div class="shop"><span>जय लक्ष्मी ट्रेडर्स</span></div>
+  <div>
+    <div class="eyebrow">हाम्रो बारेमा</div>
+    <h2>Jay Laxmi Traders</h2>
+    <p>हामी उर्लाबारी, मोरङमा अवस्थित एक विश्वसनीय डिलर हौं, जसले अपोलो पेन्ट्सका साथै मेक्सी इन्डस्ट्रिजका AAC ब्लक र छतको लागि जस्ता पाता सहित घर निर्माण सम्बन्धी विभिन्न गुणस्तरीय निर्माण सामग्रीहरू उपलब्ध गराउँछौं। हाम्रो उद्देश्य तपाईंको घर र व्यवसायका लागि उच्च गुणस्तरीय सामग्री र उत्कृष्ट सेवा प्रदान गर्नु हो।</p>
+    <div class="feat"><div><i>🛡️</i>गुणस्तरीय उत्पादन</div><div><i>👥</i>स्थानीय सहयोग</div><div><i>🏷️</i>प्रतिस्पर्धी मूल्य</div><div><i>⭐</i>विश्वसनीय ग्राहक सेवा</div></div>
+  </div>
+  <div class="card-dark">
+    <div style="font-size:34px">🪷</div>
+    <h3>जय लक्ष्मी ट्रेडर्स</h3>
+    <p>पेन्ट्स सम्बन्धिय सम्पूर्ण सामग्री पाउनुका साथै पेनिङ्को सेवा पनि उपलब्ध छ ।</p>
+    <strong>सस्तो र सुलभ मूल्यमा<br>ईज विक्री गरिन्छ ।</strong>
+    <div class="r">📍 उर्लाबारी-७, स्कुलडाँडा</div>
+    <div class="r">📞 <a href="tel:+9779824236730">९८२४२३६७३०</a></div>
+    <div class="r">📞 <a href="tel:+9779823367804">९८२३३६७८०४</a></div>
+  </div>
+</div>
+</section>
+
+<section class="prod" id="products">
+<div class="wrap">
+  <div class="eyebrow">हाम्रो उत्पादनहरू</div>
+  <h2>प्रिमियम ब्रान्डका गुणस्तरीय सामग्रीहरू</h2>
+  <p>हामी तपाईंका घर र निर्माण कार्यका लागि उच्च गुणस्तरका सामग्रीहरू विश्वसनीय ब्रान्डसहित आजै उपलब्ध गराउँछौं।</p>
+  <div class="grid">
+    <div class="pc">
+      <h3><span>🖌</span>अपोलो पेन्ट्स</h3><small>सुन्दर र दीर्घकालीन रंगहरू।</small>
+      <div class="vis">
+        <div class="can" style="height:80px;background:#c8d84a"></div><div class="can" style="height:95px;background:#8e5bb5"></div>
+        <div class="can" style="height:125px;width:60px;background:#c9d92e"></div><div class="can" style="height:105px;background:#2a5db0"></div>
+        <div class="can" style="height:90px;background:#e04c8c"></div><div class="can" style="height:75px;background:#f0b323"></div>
+      </div>
+      <div class="icons"><div><i>🛡</i><b>भित्री पेन्ट्स</b>सुन्दर र सफा स्पेसका लागि</div><div><i>🏠</i><b>बाहिरी पेन्ट्स</b>मौसम प्रतिरोधी, दीर्घकालीन</div><div><i>🏢</i><b>प्राइमर र प्रोटेक्सन</b>बेहतर आसंजन, लामो आयु</div><div><i>💧</i><b>वाटर केयर पुट्टी</b>सतह सम्पूर्ण, प्रत्यक्षताका लागि</div></div>
+      <a class="more" href="#contact">उत्पादनहरू हेर्नुहोस् →</a>
+    </div>
+    <div class="pc">
+      <h3><span>◎</span>मेक्सी इन्डस्ट्रिज<br>AAC ब्लकहरू</h3>
+      <div class="vis" style="align-items:center"><div class="blk" style="width:120px;height:70px"></div><div class="blk" style="width:90px;height:90px;margin-left:-30px;margin-top:-30px"></div></div>
+      <div class="sizes"><span>4" AAC ब्लक<br>(100mm)</span><span>6" AAC ब्लक<br>(150mm)</span><span>8" AAC ब्लक<br>(200mm)</span></div>
+      <a class="more" href="#contact">उत्पादनहरू हेर्नुहोस् →</a>
+    </div>
+    <div class="pc">
+      <h3><span>⛨</span>छतको जस्ता पाता</h3>
+      <div class="vis" style="align-items:center"><div class="sheets"><i style="--c:#2f6fc4;top:50px"></i><i style="--c:#2a9d5c;top:32px"></i><i style="--c:#d63a2f;top:14px"></i></div></div>
+      <div class="icons"><div><i>🛡</i><b>टिकाउपन</b></div><div><i>☂</i><b>मौसम प्रतिरोधी</b></div><div><i>∞</i><b>लामो समयसम्म</b></div></div>
+      <a class="more" href="#contact">उत्पादनहरू हेर्नुहोस् →</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="serv" id="services">
+<div class="wrap">
+  <div class="eyebrow">हाम्रो अन्य सेवाहरू</div>
+  <h2>जय लक्ष्मी कन्स्ट्रक्सन एण्ड<br>मल्टिपर्पोज प्रा. लि.</h2>
+  <p>निर्माण सामग्री तथा सेवाबारे जानकारीका लागि हामीलाई सम्पर्क गर्नुहोस्। तपाईंको सपनाको घर निर्माणमा हामीसँग जोडिनुहोस्।</p>
+  <a class="mini wa-link" href="#" target="_blank" rel="noopener">थप जानकारी →</a>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+  <div class="ph"></div>
+  <div>
+    <b class="t">हामीलाई सम्पर्क गर्नुहोस्</b><small>कुनै पनि सामग्री वा सेवाबारे जानकारीका लागि हामीलाई सम्पर्क गर्नुहोस् ।</small>
+    <div class="num">📞 <a href="tel:+9779824236730">९८२४२३६७३०</a></div>
+    <div class="num">📞 <a href="tel:+9779823367804">९८२३३६७८०४</a></div>
+    <div class="num sm">📍 उर्लाबारी-७, स्कुलडाँडा</div>
+  </div>
+  <div>
+    <b class="t" style="color:var(--green)">WhatsApp मार्फत सम्पर्क गर्नुहोस्</b><small>छिटो र सजिलो सेवाका लागि</small>
+    <a class="btn wa wa-link" href="#" target="_blank" rel="noopener">WhatsApp मा मेसेज गर्नुहोस्</a>
+  </div>
+  <button class="locbtn open-map"><span style="font-size:24px">📍</span><span><b>हाम्रो लोकेशन हेर्नुहोस्</b><small>गुगल नक्सामा हेर्नुहोस्</small></span></button>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <div class="logo"><img src="images/logo.png" alt="Jay Laxmi Traders logo" style="width:40px;height:40px;object-fit:contain"><span><b>JAY LAXMI TRADERS</b><small>Paints | Blocks | Roofing | Construction Materials</small></span></div>
+  <div class="mid"><span>📞 ९८२४२३६७३०<br>&nbsp;&nbsp;&nbsp;&nbsp;९८२३३६७८०४</span><span>📍 उर्लाबारी-७, मोरङ<br>&nbsp;&nbsp;&nbsp;&nbsp;(स्कुलडाँडा)</span></div>
+  <div class="social">नेपाली <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a></div>
+</div>
+<div class="copy"><div class="wrap"><span>© 2025 Jay Laxmi Traders. सर्वाधिकार सुरक्षित ।</span><span>गुणस्तर सामग्री &nbsp;|&nbsp; भरपर्दो सेवा &nbsp;|&nbsp; उज्ज्वल भोलि</span></div></div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="mbox">
+    <header><span>📍 जय लक्ष्मी ट्रेडर्स – उर्लाबारी-७, स्कुलडाँडा, मोरङ</span><button class="x" id="closeMap" aria-label="Close">×</button></header>
+    <iframe id="mapFrame" title="Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="f"><a class="btn wa" id="openGM" target="_blank" rel="noopener">Google Maps मा खोल्नुहोस्</a></div>
+  </div>
+</div>
+
+<script>
+// ===== Settings: edit these =====
+const WA_NUMBER = "9779823367804";           // 977 = Nepal country code
+const WA_TEXT   = "नमस्ते, म जय लक्ष्मी ट्रेडर्स बाट जानकारी लिन चाहन्छु।";
+const MAP_QUERY = "Jay Laxmi Traders, Urlabari, Morang, Nepal";
+// =================================
+
+const waURL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_TEXT)}`;
+document.querySelectorAll('.wa-link').forEach(a => a.href = waURL);
+
+const q = encodeURIComponent(MAP_QUERY);
+const modal = document.getElementById('modal');
+const frame = document.getElementById('mapFrame');
+document.getElementById('openGM').href = `https://www.google.com/maps/search/?api=1&query=${q}`;
+document.querySelectorAll('.open-map').forEach(b => b.addEventListener('click', () => {
+  frame.src = `https://www.google.com/maps?q=${q}&output=embed`;
+  modal.classList.add('open');
+}));
+const closeMap = () => { modal.classList.remove('open'); frame.src = ''; };
+document.getElementById('closeMap').onclick = closeMap;
+modal.addEventListener('click', e => { if (e.target === modal) closeMap(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMap(); });
+
+// ===== IMAGES: put your file names between the quotes =====
+// Leave "" to keep the placeholder. Example: hero: "images/hero.jpg"
+const IMAGES = {
+  hero:         "images/hero.jpg",     // house + bucket banner photo
+  shop:         "images/shop.jpg",     // shop front photo
+  paints:       "images/paints.png",   // group of Apollo paint buckets
+  blocks:       "images/blocks.webp",  // AAC blocks
+  roofing:      "images/roofing.webp", // roofing sheets stack
+  construction: ""                      // no photo given yet, keeps the banner background
+};
+// ===========================================================
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
+  if (IMAGES.hero) $('.hero').style.background =
+    `linear-gradient(90deg,#0d1d30 0%,#0f2238 42%,rgba(15,34,56,.55) 70%,rgba(15,34,56,.15) 100%),url("${IMAGES.hero}") center/cover`;
+  if (IMAGES.shop) $$('.shop,.ph').forEach(e => {
+    e.classList.add('has-img');
+    e.style.background = `url("${IMAGES.shop}") center/cover`;
+  });
+  [IMAGES.paints, IMAGES.blocks, IMAGES.roofing].forEach((src, i) => {
+    if (src) $$('.pc .vis')[i].innerHTML = `<img src="${src}" alt="">`;
+  });
+  if (IMAGES.construction) $('.serv').style.background =
+    `linear-gradient(90deg,#0d1d30 30%,rgba(13,29,48,.55) 70%,rgba(230,140,60,.5)),url("${IMAGES.construction}") center/cover`;
+})();
+
+// mobile menu + active nav link
+const nav = document.getElementById('nav');
+document.getElementById('burger').onclick = () => nav.classList.toggle('open');
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+const links = [...nav.querySelectorAll('a')];
+const secs = links.map(a => document.querySelector(a.getAttribute('href')));
+addEventListener('scroll', () => {
+  let i = secs.findIndex((s, n) => s.getBoundingClientRect().top <= 120 && (!secs[n+1] || secs[n+1].getBoundingClientRect().top > 120));
+  links.forEach((l, n) => l.classList.toggle('active', n === i));
+}, { passive: true });
+
+// language toggle (nav + hero text)
+const tr = document.querySelectorAll('[data-en]');
+tr.forEach(el => {
+  el._ne = el.innerHTML;
+  const em = el.querySelector('em');
+  if (em) { el._neEm = em.innerHTML; el._enEm = em.dataset.en; }
+});
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.lang button').forEach(x => x.classList.toggle('on', x === b));
+  const en = b.dataset.l === 'en';
+  document.documentElement.lang = en ? 'en' : 'ne';
+  tr.forEach(el => {
+    if (el.tagName === 'EM') return;
+    const em = el.querySelector('em');
+    if (em) el.innerHTML = en ? `${el.dataset.en}<em>${el._enEm}</em>` : el._ne;
+    else el.innerHTML = en ? el.dataset.en : el._ne;
+  });
+}));
+</script>
+</body>
+</html>
